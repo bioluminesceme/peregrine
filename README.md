@@ -51,6 +51,13 @@ Expect soldering to take about a day.
 - wire cutter
 - pliers to bend the wire into a loop for soldering
 
+
+## 3D printed switch plate and case
+  - switch plate: I forgot a hole for the last connection pin of the TRRS connector. Drill a small hole for that.
+  - the case has some extra spacing on the side in case you want to mount the microcontroller on the bottom of the switchplate.
+  - it also has some supporting pins. they were in the way of my wiring so I snipped those off.
+
+
 # Start here
 
 https://geekhack.org/index.php?topic=87689.0
@@ -180,5 +187,5 @@ Happy typing!
 # ToDO
 - Add an extra layer?
 - Make a proper board in KiCAD?
-- redesign the case, it's a bit creaky (I might just glue this thing together)
+- redesign the case, it's a bit creaky (I will probably just glue this thing together if the board is working, I probably want to make some tweaks after I've learned steno and make another board anyway)
 - I've also added some sugru over the TRRS connectors, the edges of the microcontrolelrs, and the reset buttons so they stay put and I don't risk yanking out the part when I pull out the cable.
