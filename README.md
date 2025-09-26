@@ -1,5 +1,9 @@
 # Peregrine Split Steno Keyboard 
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/bioluminesceme)
+
+
+
 A wired, split, handwired stenography keyboard with low profile Choc keys (close together to make hitting multiple keys at once easier/more comfortable)
 
 The left half is set to master, this means the USB cable that connects the keyboard to your computer has to be connected to the left half. You can change it to MASTER_RIGHT in qmk_firmware\keyboards\peregrine\config.h and then recompile the firmware.
@@ -189,3 +193,5 @@ Happy typing!
 - Make a proper board in KiCAD?
 - redesign the case, it's a bit creaky (I will probably just glue this thing together if the board is working, I probably want to make some tweaks after I've learned steno and make another board anyway)
 - I've also added some sugru over the TRRS connectors, the edges of the microcontrolelrs, and the reset buttons so they stay put and I don't risk yanking out the part when I pull out the cable.
+
+[![Say Thanks!](https://img.shields.io/badge/Ko--fi-Say%20Thanks%20with%20a%20tip!-2ebde1?logo=kofi&logoColor=white)](https://ko-fi.com/bioluminesceme)
