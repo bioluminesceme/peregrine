@@ -7,6 +7,7 @@ The left half is set to master, this means the USB cable that connects the keybo
 ! Important.
 Never pull the TRRS cable out when the keyboard is connected. (apparently this can short everything)
 
+![Peregrine v1](/images/peregrine.jpg)
 
 ## Keymap layout
 
