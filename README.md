@@ -34,6 +34,7 @@ and then rebuild the firmware.
 ```
 
 Small note: I couldn't get the top Steno S1 key to work, it is assigned S1, but outputs #. The bottom S one works though, use that.
+Edit - I think this is because of a setting in Plover where you can set the key to # or S!
 
 This is a guide for people who have never soldered a thing before.
 Expect soldering to take about a day.
@@ -146,11 +147,11 @@ For example as you can read below, column 3 on the left half (the column  that c
    ![soldering done](images/tocontroller.jpg)
   
 5. With a multimeter, set it to the sound symbol so it will beep, and check with the probes that all your rows and columns are indeed connected to the pin on the microcontroller. Or skip this step and see if the board has any keys on 1 row or 1 column that do not work, in which case there's a connection that needs to be fixed.
-It's easy to life the plate out of the case. 
+It's easy to lift the plate out of the case. 
 
 6. **Add the TRRS connectors**
    - Tip=VCC, Ring1=GND, Ring2=Data (pin D0), Sleeve=GND
-   - Tip is the tip of the plug, sleeve is closed to the cable.
+   - Tip is the tip of the plug, sleeve is closest to the cable.
    - Tip is inserted into the connector, so it's the 'farthest away' pin.
    - Connect Data (Ring2) to pin D0 on both halves
    - Connect VCC (Tip) to VCC on both halves
@@ -162,6 +163,7 @@ It's easy to life the plate out of the case.
    - The pins on the short side of the rectangle are GND(ground) and RST (reset)
    - Does not matter which way around.
    - The reset button is used to enter bootloader mode
+   - Update. I may remove these reset buttons and go with boot magic in the firmware only, or at least hide the reset buttons somewhere inside the case (to prevent accidentally clicking them), and to make the board look better. I had expected to need to reset my first version quite often. But I've not needed to do this after the first time I flashed the firmware. 
 
 ```
       ┌───────────┐
@@ -172,7 +174,7 @@ It's easy to life the plate out of the case.
 ```
  
 # **Firmware**
-   - if you want to use it as is, you need to download [QMK Toolbox](https://qmk.fm/toolbox), open firmware\peregrine_default_steno_only.hex in the Toolbox, connect each atmega32u4 microcontroller separately with a USB-C cable to your computer (you need to flash both). It will appear as connected and the Flash button will be enabled. I had to act fast or it would disconnect again.
+   - if you want to use it as is, you need to download [QMK Toolbox](https://qmk.fm/toolbox), open firmware\peregrine_default_steno_only.hex in the Toolbox, connect each atmega32u4 microcontroller separately with a USB-C cable to your computer (you need to flash both halves). It will appear as connected and the Flash button will then be enabled. I had to act fast or it would disconnect again.
    - Repeat for the other microcontroller
    - If you want to change anything (for example reassign Copy/Paste to something else, or set the other half to Master so you can plug your USB cable into that half) you need to recompile the firmware first.
 
