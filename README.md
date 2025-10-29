@@ -188,10 +188,24 @@ It's easy to life the plate out of the case.
 Happy typing!
 
 
-# ToDO
-- Add an extra layer?
-- Make a proper board in KiCAD?
-- redesign the case, it's a bit creaky (I will probably just glue this thing together if the board is working, I probably want to make some tweaks after I've learned steno and make another board anyway)
-- I've also added some sugru over the TRRS connectors, the edges of the microcontrolelrs, and the reset buttons so they stay put and I don't risk yanking out the part when I pull out the cable.
+# Working on
+- [] Make a proper board in KiCAD (with thanks to the helpers in discord!)
+
+# Future possibilities 
+- [] maybe make a version that supports Javelin 
+- [] maybe make a wireless version (bluetooth and battery)
+- these are pretty far-future for me, I need to learn steno first, get my speed up, and be at a point where I'm not constantly adding new with to my dictionary or tweaking things.
+- maybe someone else will do this
+
+
+# Will I sell this?
+- No.
+- But this repo has everything you need to make your own
+- I may have spare PCBs that I'm happy to sell so you don't have to order the minimum quantity (2x5) PCBS. If I do, I'll list them here. - First come first serve, and I'm in the Netherlands so shipping might make this option quite expensive for some people compared to ordering them yourself
+- hand wiring is still a good option, and probably the cheapest way to make one 
+
+# Can you sell this?
+- Yes. Just pay me 10 percent of your profits after costs of parts for each sale.
+- If you create a wireless version or a version with Javelin, please let me add those files to this repo. 
 
 [![Say Thanks!](https://img.shields.io/badge/Ko--fi-Say%20Thanks%20with%20a%20tip!-2ebde1?logo=kofi&logoColor=white)](https://ko-fi.com/bioluminesceme)
