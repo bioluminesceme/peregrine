@@ -1,0 +1,161 @@
+# Peregrine, the left half
+
+# TODO Add Through holes for mounting to the case
+
+# Mounting Holes
+# holeTopLeft:
+#   what: mountinghole
+#   where:
+#     ref: [matrix_outer_num]
+#     shift: [0.5kx, -0.3ky]
+# holeBottomLeft:
+#   what: mountinghole
+#   where:
+#     ref: [matrix_outer_bottom]
+#     shift: [0.5kx, -0.3ky]
+
+units:
+  kx: cx
+  ky: cy
+  px: kx + 2
+  py: ky + 2
+  $default_width: cx
+  $default_height: cy
+  # used to move the bottom row of the keys, and to set space right for the microcontroller
+  spaceright: 34
+  dropdown: 12
+
+points:
+  zones:
+    mainkeys:
+      anchor:
+        shift: [100, -100]
+      columns:
+        one:
+          rows.bottom.skip: true
+          key:
+            column_net: P21
+        two:
+          rows.bottom.skip: true
+          key:
+            column_net: P20
+        three:
+          rows.bottom.skip: true
+          key:
+            column_net: P19
+        four:
+          key:
+            column_net: P18
+        five:
+          key:
+            column_net: P15
+        six:
+          key:
+            column_net: P14
+      rows:
+        bottom:
+          row_net: P9
+        middle:
+          row_net: P8
+          shift: [0, 14]
+        top:
+          row_net: P7
+      key:
+        padding: 1ky
+        spread: 1kx
+  key:
+    padding: cy
+    footprints:
+      choc_hotswap:
+      type: choc
+      nets:
+        from: =column_net
+        to: GND
+      params:
+        keycaps: true
+        reverse: false
+        hotswap: true
+outlines:
+  raw:
+    - what: rectangle
+      where: true
+      bound: true
+      size: [2kx, 2ky]
+      fillet: 2
+  keys:
+    - what: rectangle
+      where: true
+      size: [1cx - 0.5, 1cy - 0.5] # Choc keycaps are 17.5 x 16.5
+      fillet: 2
+  board:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: mainkeys_one_top
+          shift: [-dropdown, dropdown]
+        - ref: mainkeys_six_top
+          shift: [spaceright, dropdown]
+        - ref: mainkeys_six_bottom
+          shift: [spaceright, -dropdown]
+        - ref: mainkeys_four_bottom
+          shift: [-dropdown, -dropdown]
+        - ref: mainkeys_one_middle
+          shift: [-dropdown, -31-dropdown]
+      fillet: 2
+  combo:
+    - name: board
+    - operation: subtract
+      name: keys
+
+pcbs:
+  peregrine-lefty:
+    outlines:
+      main:
+        outline: board
+      keys:
+        outline: keys
+        layer: Eco1.User
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: false
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      promicro:
+        what: promicro
+        where:
+          ref: mainkeys_six_top
+          shift: [32, -9]
+          rotate: -90
+      #reset: Manually solder this thing in later
+      #  what: button
+      #  params:
+      #    from: GND
+      #    to: RST
+      #  where:
+      #    ref: mainkeys_six_middle
+      #    shift: [dropdown, 24]
+      trrs:
+        what: trrs
+        params:
+          reverse: false
+          A: GND
+          B: P3
+          C: GND
+          D: VCC
+        where:
+          ref: mainkeys_six_middle
+          shift: [spaceright, -dropdown]
+          rotate: -90
