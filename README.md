@@ -193,11 +193,10 @@ Happy typing!
 # Working on
 - [x] Make a proper board in KiCAD (with thanks to the helpers in discord!) 
 - [x] boards ordered 
-- [ ] boards tested 
-- [ ] do not use the files in the KiCAD folder please.
+- [ ] boards tested (do not use the files in the KiCAD folder yet please. untested!)
 
 # Future possibilities 
-- [] maybe make a version that supports Javelin (I got ProMicro formfactor boards with the correct chip...but this may take quite a while because I'm still frequently adding/updating my Plover dictionary file)
+- [ ] maybe make a version that supports Javelin (I got ProMicro formfactor boards with the correct chip...but this may take quite a while because I'm still frequently adding/updating my Plover dictionary file)
 
 
 
