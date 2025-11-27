@@ -173,47 +173,27 @@ It's easy to lift the plate out of the case.
 
 ```
  
-# **Firmware**
-   - if you want to use it as is, you need to download [QMK Toolbox](https://qmk.fm/toolbox), open firmware\peregrine_default_steno_only.hex in the Toolbox, connect each atmega32u4 microcontroller separately with a USB-C cable to your computer (you need to flash both halves). It will appear as connected and the Flash button will then be enabled. I had to act fast or it would disconnect again.
+# ** Flashing the Firmware**
+   - Download [QMK Toolbox](https://qmk.fm/toolbox)
+   - Open the firmware you want in the Toolbox, choice between left/right side is master (master is the side that you connect to your PC with a USB cable)
+   - firmware\F:\Keyboards\PeregrineGithub\firmware\QMK\peregrine_master_left_promicro_atmega32u4.hex
+   - firmware\F:\Keyboards\PeregrineGithub\firmware\QMK\peregrine_master_right_promicro_atmega32u4.hex
+   - Connect one atmega32u4 microcontroller to your computer with a USB-C cable (you need to flash both microcontrollers individually, so repeat these steps for the other one). 
+   - The microcontroller will show as **connected** in the Toolbox, and the Flash button will become enabled. Click it and wait a few seconds, it should show some kind of success message. 
    - Repeat for the other microcontroller
-   - If you want to change anything (for example reassign Copy/Paste to something else, or set the other half to Master so you can plug your USB cable into that half) you need to recompile the firmware first.
 
    ![QMK Toolbox](images/qmktoolbox.jpg)
    
 ## Recompile the firmware
+
+If you want to change anything, for example set the Copy and Paste keys to something different, you need change that in the code and recompile the firmware.
    -  Install QMK 
-   -  copy the qmk_firmware folders into your qmk root folder
+   -  copy the qmk_firmware folders into your qmk root folder 
    -  set user keyboard to peregrine
    -  `> qmk compile -kb peregrine -km default`
-   -  firmware will compile into a new .hex file in the qmk root folder, use the toolkit to flash it onto both microcontroller boards.
+   -  firmware will compile into a new .hex file in the qmk root folder
+   -  use the toolkit to flash it onto both microcontroller boards.
   
 Happy typing!
 
-
-# Working on
-- [x] Make a proper board in KiCAD (with thanks to the helpers in discord!) 
-- [x] boards ordered 
-- [x] board tested (and working!)
-- [ ] Javelin (wish me luck)
-
-# Will I sell this?
-- No. I have no plans for a shop.
-- I will have spare PCBs that I'm happy to sell so you don't have to order the minimum quantity (2x5) PCBS. If I do, I'll list them here. 
-- I may have enough parts to sell a handful of presoldered boards (you add the Choc switches and keycaps). If I do, I'll list them here.
-- First come first serve.
-- I'm in the Netherlands so shipping might make this option quite expensive for some people compared to ordering them yourself
-- Hand wiring is still a good option, and the cheapest way to make one.
-
-# Can you sell this?
-- Yes! This repo has everything you need to make your own. 
-- Just pay me 10 percent of your profits after the costs of the parts (not labor), for each sale.
-- If you create a wireless version please let me add those files and instructions to this repo.
-
-[![Say Thanks!](https://img.shields.io/badge/Ko--fi-Say%20Thanks%20with%20a%20tip!-2ebde1?logo=kofi&logoColor=white)](https://ko-fi.com/bioluminesceme)
-
-*20% of donations will go to https://www.omf.ngo/ MECFS Research.*
-
-
-## HELP!
-
-- Sorry, I will not be providing any technical support. 
+ 
