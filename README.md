@@ -8,6 +8,10 @@ A wired, split, handwired stenography keyboard with low profile Choc keys (close
  
 
 ![Peregrine v1](/images/peregrine.jpg)
+![Peregrine with PCB boards](/images/peregrine-pcb-board.jpg)
+
+- [ ] (to add, Javelin version photo, green case, when done)
+
 
 ## Keymap layout
 
