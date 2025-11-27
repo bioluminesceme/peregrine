@@ -1,3 +1,5 @@
+![Peregrine with PCB boards](/images/peregrine-pcb-board.jpg)
+
 # Ordering the board 
 
 I recommend JLCPCB, and I highly recommend you order this so that **they** will solder those tiny surface mount diodes for you.
@@ -31,5 +33,5 @@ This will cost about $90 shipped for 2 sets of 5 (5 right halves, 5 left halves)
 - Tested with a Bambu A1 on default/factory settings with light blue and light green Bambu matte filament. No issues at all.
 
 
-- [ ] ToDo Add photos of the finished board
+ 
  

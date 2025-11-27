@@ -41,7 +41,7 @@ Expect soldering to take about a day.
 
 ## Parts List
 
-- 30x Choc switches (I used purple ones from [aliexpress](https://www.aliexpress.com/item/1005005883472162.html?spm=a2g0o.order_list.order_list_main.100.1ed918024ECzr8) ) 25grams )
+- 30x Choc switches (I used purple and pink ones from [aliexpress](https://www.aliexpress.com/item/1005005883472162.html?spm=a2g0o.order_list.order_list_main.100.1ed918024ECzr8) ) 20-25grams -- I've found lighter switches more comfortable to type on )
 - 30x keycaps (3D printed, see in 3dmodels folder, or you can buy pretty custom ones from https://fkcaps.com/ )
 - 30x 1N4148 DO-35 through-hole diodes (I got them on [aliexpress](https://www.aliexpress.com/item/4000142272546.html?spm=a2g0o.order_list.order_list_main.50.1ed918024ECzr8) in a pack of 100  )
 - bare copper wire 16 AWG (1.25mm bought locally)
